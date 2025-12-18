@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Page - Header</title>
+    <title>Simple Page - Combined</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fafafa; color:#222 }
+        header { background:#2b6cb0; color:#fff; padding:16px }
+        main { padding:20px }
+        .card { background:#fff; padding:16px; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.1) }
+        button { padding:8px 12px; border-radius:4px; border:none; background:#2b6cb0; color:#fff }
+    </style>
 </head>
 <body>
-    <header style="background:#f5f5f5;padding:12px 16px;">
-        <h1>Site Header (feature/header)</h1>
+    <header>
+        <h1>Site Header</h1>
     </header>
     <main>
-        <h2>Welcome to My Website</h2>
-        <p>This is a simple HTML page.</p>
+        <div class="card">
+            <h2>Welcome to My Website</h2>
+            <p>This page combines header, styles, and a small script.</p>
+            <button id="clickMe">Click me</button>
+        </div>
     </main>
+    <script>
+        document.getElementById('clickMe').addEventListener('click', function(){
+            alert('Hello from merged features!');
+            console.log('Button clicked');
+        });
+    </script>
 </body>
 </html>
